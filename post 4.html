@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Atlas Tool to Display Demographic Information</title>
+        <title>Dot Density and Chloropleth Maps</title>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -34,13 +34,13 @@
             </div>
         </nav>
         <!-- Page Header-->
-        <header class="masthead" style="background-image: url('assets/atlas/Germany_atlas.jpg')">
+        <header class="masthead" style="background-image: url('assets/chloropleth.jpg')">
             <div class="container position-relative px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <div class="post-heading">
-                            <h1>Atlas Tool to Display Demographic Information</h1>
-                            <h2 class="subheading">Utilizing the atlas tool as well as rules-based symbology in QGIS</h2>
+                            <h1>Dot Density and Chloropleth Maps</h1>
+                            <h2 class="subheading">Comparing dot density and chloropleth maps in ArcGIS Pro</h2>
                             <span class="meta">
                                 Posted by
                                 <a href="#!">Anya Dougherty</a>
@@ -56,26 +56,15 @@
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
-                        <h2 class="section-heading">The Prompt</h2>
-                        <p>The goal of this project was to display the migrational demographics of Germany as a whole but also the indivudal counties. This was accomplished by using the atlas feature and utilizing a Rule-Based style render to allow the viewer to only see the selected county.</p>
-                        <h2 class="section-heading">Results</h2>
-                        <a href="#!"><img class="img-fluid" src="assets/atlas/Germany_atlas.jpg" alt="..." /></a>
-                        <a href="#!"><img class="img-fluid" src="assets/atlas/output_1.png" alt="..." /></a>
-                        <a href="#!"><img class="img-fluid" src="assets/atlas/output_2.png" alt="..." /></a>
-                        <a href="#!"><img class="img-fluid" src="assets/atlas/output_3.png" alt="..." /></a>
-                        <a href="#!"><img class="img-fluid" src="assets/atlas/output_4.png" alt="..." /></a>
-                        <a href="#!"><img class="img-fluid" src="assets/atlas/output_5.png" alt="..." /></a>
-                        <a href="#!"><img class="img-fluid" src="assets/atlas/output_6.png" alt="..." /></a>
-                        <a href="#!"><img class="img-fluid" src="assets/atlas/output_7.png" alt="..." /></a>
-                        <a href="#!"><img class="img-fluid" src="assets/atlas/output_8.png" alt="..." /></a>
-                        <a href="#!"><img class="img-fluid" src="assets/atlas/output_9.png" alt="..." /></a>
-                        <a href="#!"><img class="img-fluid" src="assets/atlas/output_10.png" alt="..." /></a>
-                        <a href="#!"><img class="img-fluid" src="assets/atlas/output_11.png" alt="..." /></a>
-                        <a href="#!"><img class="img-fluid" src="assets/atlas/output_12.png" alt="..." /></a>
-                        <a href="#!"><img class="img-fluid" src="assets/atlas/output_13.png" alt="..." /></a>
-                        <a href="#!"><img class="img-fluid" src="assets/atlas/output_14.png" alt="..." /></a>
-                        <a href="#!"><img class="img-fluid" src="assets/atlas/output_15.png" alt="..." /></a>
-                        <a href="#!"><img class="img-fluid" src="assets/atlas/output_16.png" alt="..." /></a>
+                        <h2 class="section-heading">The Problem</h2>
+                        <p>The problem was to identify the states with the largest Hispanic populations, the states with the smallest Hispanic populations, and the states whose Hispanic population are larger than the population of the least populated state. The states with the largest Hispanic population included: California, Texas, Florida, New York, and Illinois. The states with the smallest Hispanic population included: Vermont, North Dakota, Maine, South Dakota, and West Virginia. Sixteen different states had Hispanic populations larger than the population of the least populated state (Wyoming) those states included: California, Texas, Florida, New York, Illinois, Arizona, New Jersey, Colorado, New Mexico, Georgia, North Carolina, Washington, Pennsylvania, Nevada, Virginia, and Massachusetts. </p>
+                        <h2 class="section-heading">Skills Demonstrated</h2>
+                        <p>-	Different symbology for data fills: proportion, dot density, and graduated colors.</p>
+                        <p>-	Legend properties: how to convert legend to graphic and edit different labels.</p>
+                        <h2 class="section-heading">How the Problem was Solved</h2>
+                        <p>The problem was solved by utilizing the attribute table and then confirming the results by checking the dot density and chloropleth maps. The first step was to order the field “DP0100002” by descending and note the first five states as the states with the largest Hispanic populations. The second step was to order the same field as ascending and note the first five states as the states with the smallest Hispanic populations. For the final section of the problem, I first needed to know the population of the least populated state. I ordered the field “DP0010001” by ascending and noted that Wyoming had a population of 563,626. To get the 16 states in my answer I selected by attribute using the query “DP0100002 > 563626” and then noted these states as having larger Hispanic populations than the population of the least populated state. </p>
+                        <a href="#!"><img class="img-fluid" src="assets/dot density.jpg" alt="..." /></a>
+                        <a href="#!"><img class="img-fluid" src="assets/chloropleth.jpg" alt="..." /></a>
                     </div>
                 </div>
             </div>
