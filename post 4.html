@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Dot Density and Chloropleth Maps</title>
+        <title>Health Data Analysis using RStudio and QGIS</title>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -39,12 +39,12 @@
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <div class="post-heading">
-                            <h1>Dot Density and Chloropleth Maps</h1>
-                            <h2 class="subheading">Comparing dot density and chloropleth maps in ArcGIS Pro</h2>
+                            <h1>Health Data Analysis</h1>
+                            <h2 class="subheading">Health Data Analysis using RStudio and QGIS</h2>
                             <span class="meta">
                                 Posted by
                                 <a href="#!">Anya Dougherty</a>
-                                on November 27, 2023
+                                on May 8, 2024
                             </span>
                         </div>
                     </div>
@@ -57,12 +57,12 @@
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <h2 class="section-heading">The Problem</h2>
-                        <p>The problem was to identify the states with the largest Hispanic populations, the states with the smallest Hispanic populations, and the states whose Hispanic population are larger than the population of the least populated state. The states with the largest Hispanic population included: California, Texas, Florida, New York, and Illinois. The states with the smallest Hispanic population included: Vermont, North Dakota, Maine, South Dakota, and West Virginia. Sixteen different states had Hispanic populations larger than the population of the least populated state (Wyoming) those states included: California, Texas, Florida, New York, Illinois, Arizona, New Jersey, Colorado, New Mexico, Georgia, North Carolina, Washington, Pennsylvania, Nevada, Virginia, and Massachusetts. </p>
+                        <p>The problem was that there has been noticeable increases in the frequency of wildfires and the prevalence of asthma. The goal of this project was to discover if there was relationship between these two variables. </p>
                         <h2 class="section-heading">Skills Demonstrated</h2>
                         <p>-	Different symbology for data fills: proportion, dot density, and graduated colors.</p>
                         <p>-	Legend properties: how to convert legend to graphic and edit different labels.</p>
                         <h2 class="section-heading">How the Problem was Solved</h2>
-                        <p>The problem was solved by utilizing the attribute table and then confirming the results by checking the dot density and chloropleth maps. The first step was to order the field “DP0100002” by descending and note the first five states as the states with the largest Hispanic populations. The second step was to order the same field as ascending and note the first five states as the states with the smallest Hispanic populations. For the final section of the problem, I first needed to know the population of the least populated state. I ordered the field “DP0010001” by ascending and noted that Wyoming had a population of 563,626. To get the 16 states in my answer I selected by attribute using the query “DP0100002 > 563626” and then noted these states as having larger Hispanic populations than the population of the least populated state. </p>
+                        <p>The problem was solved by utilizing RStudio to conduct Local Indicators of Spatial Association (LISA) statistics on asthma prevalence data and running a linear regression analysis between asthma prevalence and the frequency of wildfires. The asthma hot spots detected in the LISA statistics were clustered in the Northeast, Northwest, and Alaska. The wildfires were noticed to appear more frequently on the West Coast. Finally, the regression analysis results yeilded a significant positive relationship. For every 1 wildfire a county experiences, there is a 0.01 increase in asthma prevalence. </p>
                         <a href="#!"><img class="img-fluid" src="assets/dot density.jpg" alt="..." /></a>
                         <a href="#!"><img class="img-fluid" src="assets/chloropleth.jpg" alt="..." /></a>
                     </div>
