@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Candidate Location Analysis</title>
+        <title>Environmental GIS: Fire Hazards in California</title>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -39,12 +39,12 @@
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <div class="post-heading">
-                            <h1>Candidate Location Analysis</h1>
-                            <h2 class="subheading">Utilizing buffers, unions, and intersects in ArcGIS Pro</h2>
+                            <h1>Environmental GIS: Fire Hazards in California</h1>
+                            <h2 class="subheading">Utilizing zonal statistics, reclassification, and calculating fields in ArcGIS Pro as well as running linear regressions in RStudio.</h2>
                             <span class="meta">
                                 Posted by
                                 <a href="#!">Anya Dougherty</a>
-                                on November 27, 2023
+                                on July 31, 2023
                             </span>
                         </div>
                     </div>
@@ -56,15 +56,15 @@
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
-                        <h2 class="section-heading">Problem Presented</h2>
-                        <p>The City of Philadelphia is looking for the ideal locations to put in healthy food stores. They have been looking to put in store within 2,000 feet of subway or railway stations and within Philadelphia’s economic empowerment zones. They also do not want the stores to be within 1,200 feet of farmer’s markets and stores participating in the Healthy Corner Store Initiative. This problem was solved by creating a map that highlighted the areas that meet this criteria. </p>
+                        <h2 class="section-heading">Research Questions</h2>
+                        <p>What factors increase fire hazards in California?</p>
+                        <p>How do areas with greatest fire hazard risk compare to vulnerable populations?</p>
                         <h2 class="section-heading">Skills Demonstrated</h2>
-                        <p>-	Buffers and Unions: Using buffers and dissolving all features to a single layer. Using unions to combine all attributes and computing geodetic unions.</p>
-                        <p>-	Erase and Intersects: Using erase tool to erase features that fall outside of a selected feature class. The intersect tool utilized to combine features within a selected feature class.</p>
-                        <p>-	Multipart to Singlepart: Creates one feature class out of multiple separate features.</p>
-                        <h2 class="section-heading">How the Problem was Solved</h2>
-                        <p>This map was created by first creating two layers: the inclusion and exclusion layers. The inclusion layer show the area where the store could be located. This layer was created by putting 2,000 ft buffers around the railway and subway stations. The two buffered layers were then joined by a union. Finally the inclusion layer was completed by erasing all area of the layer that did not intersect the empowerment zones. The exclusion layer was then created by putting 1,200 ft buffers around the healthy corner stores and the farmer’s markets. These two layers were then joined by a union and the exclusion layer was completed.</p>
-                        <p>Now that there are two layers with the areas that these stores can and cannot be located. The next step is to erase the areas where the two layers overlap. Once this is completed there is one layer that only includes the prime candidate locations for the new health food stores. After the file had to be cleaned up by using the multipart to singlepart operation. The field for area of square feet was created and calculated using the calculate geometry operation. </p>
+                        <p>-	Zonal Statistics and in-ArcGIS Pro calulcations: Using zonal statistics, calculating geometries, and calculating fields, the overall risk of fire hazard was calculated. </p>
+                        <p>-	Linear Regression: A linear regression was run to discover the factors that had the most influence in the fire hazard risk of a county.</p>
+                        <h2 class="section-heading">Results</h2>
+                        <p>First, the factors that influenced wildfires had to be determined. The factors that were considered for fire risk were: land cover type(vegatated land vs. not vegatated), mean temperature, number of electrical substations, impervious surface, and population density. Two regressions were then run, one with wildfire information from 1984-2000 and one with wildfire information from 2000-2022. The beta coefficients from these regressions were then used as the coefficients in calulcating the risk of wildfire in each county. They landcover type appeared to present the strongest infuence on wildfire occurance along with population density and mean temperature.</p>
+                        <p>The next step was then to calculate the fire risk in each county and map it. The coefficients found in the previous step were used as weights in joining the data together to create an overall risk score. All of the data created before had number values, except for the landcover type which was reclassified in binary as 1 for vegtated and 0 non-vegtated land cover types.</p>
                         <a href="#!"><img class="img-fluid" src="assets/candidate location analysis.jpg" alt="..." /></a>
                         <a href="#!"><img class="img-fluid" src="assets/candidate table.jpg" alt="..." /></a>
                     </div>
